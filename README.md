@@ -3,6 +3,6 @@
 
 This is an simple example of Quarkus Qute interface that I use to control a 7 segments display using a Raspberry PI
 
-[demo](picture/quarkus_pi4j01.jpg?raw=true "Title")
+[picture/quarkus_pi4j01.jpg](picture/quarkus_pi4j01.jpg)
 
-- [Blog post](https://github.com/cinci/rpi-sense-hat-java)%
+- [Blog post](http://www.igfasouza.com/blog/quarkus-qute-with-raspberry-pi/)
