@@ -1,0 +1,218 @@
+{@com.igor.Message message}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{field1}</title>
+    
+    <style>
+    * { box-sizing: border-box; }
+    .bcd7sdd {
+      --smsize: var(--media-lte-sm) 300px;
+      --mdsize: var(--media-md-lg) 700px;
+      --size: var(--smsize, var(--mdsize, 900px));
+      grid-gap: 0px;
+      justify-content: space-around;
+      font-family: "Lucida Sans", monospace;
+    }
+    .bcd7sdd input {
+      margin-right: auto;
+      cursor: pointer;
+    }
+    .bcd7sdd label {
+      font-size: calc(var(--size) / 33);
+      cursor: pointer;
+    }
+    .ssdd {
+      grid-area: ssd;
+      height: calc(var(--size) * 0.50);
+      width: calc(var(--size) * 0.36);
+      background: black;
+      text-align: left;
+      position: relative;
+    }
+    .dream-in-digital {
+      position: absolute;
+      height: calc(var(--size) * 0.5);
+      width: calc(var(--size) * 0.33);
+      left: 13;
+      top: 0;
+      background: rgba(128, 0, 0, 0.33);
+      font-weight: bold;
+      font-size: calc(var(--size) / 20);
+    }
+    .dream-in-digital > span {
+      border-radius: calc(var(--size) / 15);
+      position: absolute;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: rgba(33, 0, 0, 0.25);
+    }
+    .a, .d, .g {
+      width: calc(var(--size) * 0.15);
+      height: calc(var(--size) * 0.05);
+      left: 50%;
+      line-height: calc(var(--size) / 25);
+    }
+    .a {
+      top: calc(var(--size) * 0.05);
+    }
+    .d, .h {
+      top: calc(100% - var(--size) * 0.05);
+    }
+    .g {
+      top: 50%;
+    }
+    .b, .c, .e, .f {
+      width: calc(var(--size) * 0.05);
+      height: calc(var(--size) * 0.15);
+      line-height: calc(var(--size) / 8);
+    }
+    .b, .f {
+      top: 30%;
+    }
+    .c, .e {
+      top: 70%;
+    }
+    .b, .c, .h {
+      left: calc(100% - var(--size) * 0.05);
+    }
+    .e, .f {
+      left: calc(var(--size) * 0.05);
+    }
+    .h{
+      top: calc(100% - var(--size) * 0.04);
+      width: calc(var(--size) * 0.05);
+      height: calc(var(--size) * 0.05);
+    }
+
+    .ssdd {
+      --A: initial;
+      --B: initial;
+      --C: initial;
+      --D: initial;
+      --E: initial;
+      --F: initial;
+      --G: initial;
+      --H: initial;
+    }
+    .bcd7sdd input:nth-of-type(1):checked ~ .ssdd {
+      --A: ;
+    }
+    .bcd7sdd input:nth-of-type(2):checked ~ .ssdd {
+      --B: ;
+    }
+    .bcd7sdd input:nth-of-type(3):checked ~ .ssdd {
+      --C: ;
+    }
+    .bcd7sdd input:nth-of-type(4):checked ~ .ssdd {
+      --D: ;
+    }
+    .bcd7sdd input:nth-of-type(5):checked ~ .ssdd {
+      --E: ;
+    }
+    .bcd7sdd input:nth-of-type(6):checked ~ .ssdd {
+      --F: ;
+    }
+    .bcd7sdd input:nth-of-type(7):checked ~ .ssdd {
+      --G: ;
+    }
+    .bcd7sdd input:nth-of-type(8):checked ~ .ssdd {
+      --H: ;
+    }
+
+    .ssdd {
+      --a: var(--A);
+      --b: var(--B);
+      --c: var(--C);
+      --d: var(--D);
+      --e: var(--E);
+      --f: var(--F);
+      --g: var(--G);
+      --h: var(--H);
+    }
+
+    .a {
+      --on: var(--a) #e00;
+      background: var(--on, #380000);
+    }
+    .b {
+      --on: var(--b) #e00;
+      background: var(--on, #380000);
+    }
+    .c {
+      --on: var(--c) #e00;
+      background: var(--on, #380000);
+    }
+    .d {
+      --on: var(--d) #e00;
+      background: var(--on, #380000);
+    }
+    .e {
+      --on: var(--e) #e00;
+      background: var(--on, #380000);
+    }
+    .f {
+      --on: var(--f) #e00;
+      background: var(--on, #380000);
+    }
+    .g {
+      --on: var(--g) #e00;
+      background: var(--on, #380000);
+    }
+    .h {
+      --on: var(--h) #e00;
+      background: var(--on, #380000);
+    }
+    .a, .b, .c, .d, .e, .f, .g, .h{
+      box-shadow: 0px 0px 10px var(--on, black);
+    }
+  </style>
+    
+    
+</head>
+<body>
+    <h1>Hello {field2}</h1>
+    
+    <form action="/hello/segment" method="POST" enctype="multipart/form-data" id="display">
+    
+    <div class="bcd7sdd">
+    
+    <label for="segment1">1</label>
+    <label for="segment2">2</label>
+    <label for="segment3">3</label>
+    <label for="segment4">4</label>
+    <label for="segment5">5</label>
+    <label for="segment6">6</label>
+    <label for="segment7">7</label>
+    <label for="segment8">8</label>
+    <br>
+    <input id="segment1" name="segment1" type="checkbox" {#if segment1 == 'on'}checked{/if} onclick="document.getElementById('display').submit();">
+    <input id="segment2" name="segment2" type="checkbox" {#if segment2 == 'on'}checked{/if} onclick="document.getElementById('display').submit();">
+    <input id="segment3" name="segment3" type="checkbox" {#if segment3 == 'on'}checked{/if} onclick="document.getElementById('display').submit();">
+    <input id="segment4" name="segment4" type="checkbox" {#if segment4 == 'on'}checked{/if} onclick="document.getElementById('display').submit();">
+    <input id="segment5" name="segment5" type="checkbox" {#if segment5 == 'on'}checked{/if} onclick="document.getElementById('display').submit();">
+    <input id="segment6" name="segment6" type="checkbox" {#if segment6 == 'on'}checked{/if} onclick="document.getElementById('display').submit();">
+    <input id="segment7" name="segment7" type="checkbox" {#if segment7 == 'on'}checked{/if} onclick="document.getElementById('display').submit();">
+    <input id="segment8" name="segment8" type="checkbox" {#if segment8 == 'on'}checked{/if} onclick="document.getElementById('display').submit();">
+    
+    <div class="ssdd">
+      <div class="dream-in-digital">
+        <span class="a">a</span>
+        <span class="b">b</span>
+        <span class="c">c</span>
+        <span class="d">d</span>
+        <span class="e">e</span>
+        <span class="f">f</span>
+        <span class="g">g</span>
+        <span class="h">h</span>
+      </div>
+    </div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">submit</button>
+    
+  </form>
+
+</body>
+</html>
